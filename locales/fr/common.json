@@ -1,0 +1,34 @@
+{
+    "accueil" : "Accueil",
+    "aboutUs" : "A propos",
+    "services" : "Services",
+    "actualites" : "Actualités",
+    "contacts" : "Contacts",
+    "annonces" : "Annonces",
+    "chn" : "Mohamedou El Ghotob Cheikh Tourad",
+    "slogan" : "Research Professor of Computer Science, CSIDS , FST, Université de Nouakchott",
+    "moreInfos" : "Download CV",
+    "presentation" : "Présentation",
+    "enSavoirPlus" : "En savoir plus",
+    "allActualites" : "Voir toutes les actualités",
+    "seeMore" : "See more",
+    "pourPlusInfos" : "Pour plus d'informations",
+    "moreInfosLabel" : "Pour toute information concernant nos services ou pour un besoin spécifique nous serons ravis d’échanger avec vous.",
+    "contactUs" : "Contactez-nous",
+    "nom" : "Nom",
+    "email" : "Email",
+    "message" : "Message",
+    "envoyer" : "Envoyer",
+    "footer" : "Copyright 2024",
+
+    "about-title" : "A props du CHN",
+    "about-chn" : "A propos du centre hospitalier national",
+    "organisation" : "Organisation",
+    "objectif" : "Objectif",
+    "motDuDirecteur" : "Mot du directeur",
+
+    "welcome" : "Bienvenue au Centre Hospitalier National de Nouakchott (Mauritanie)"
+    
+
+
+}

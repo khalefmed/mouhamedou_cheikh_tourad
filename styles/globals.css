@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+}
+
+.service:hover {
+
+    transform : translate(3%, 0);
+    cursor : pointer;
+
+}
+
+
+
+.cached {
+    display : none;
+}
+
+
+.show {
+    display : flex;
+}
+
+.hidden {
+    display : flex;
+}
