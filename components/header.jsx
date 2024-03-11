@@ -3,16 +3,11 @@ import Image from 'next/image'
 
 import {useState} from 'react'
 
-import { useTranslation } from 'next-i18next';
 
 
 export default function Header(props){
 
-    const { i18n } = useTranslation();
-
-    const changeLanguage = (lng) => {
-      i18n.changeLanguage(lng);
-    };
+ 
 
     const [showNav, setShowNav] = useState(false);
 
