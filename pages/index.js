@@ -22,6 +22,7 @@ import { is } from '@react-spring/shared'
 
 import { createClient } from "next-sanity";
 import ResearchProjects from '@/components/research_projects'
+import News from '@/components/news'
 
 //... 
 
@@ -33,7 +34,7 @@ const client = createClient({
 });
 
 
-export default function Home({publicationsList, domainsList, talksList, projectsList, about}) {
+export default function Home({publicationsList, domainsList, talksList, projectsList, about, newsList}) {
 
 
   return (
@@ -53,12 +54,21 @@ export default function Home({publicationsList, domainsList, talksList, projects
        slogan="Research Professor of Computer Science, CSIDS , FST, Université de Nouakchott"
        moreInfos="Download CV" 
       />
+      
       < Presentation
        presentation="About" 
        enSavoirPlus="More infos" 
        isArabic={false}
        content={about[0][`about`]}
       />
+      < News 
+          talks="News" 
+          allActualites="More News" 
+          seeMore="See more"
+          isArabic = {false} 
+          newsList={newsList}
+          client={client}
+       />
       < Actualites 
           actualites="Publications"
           allActualites="All publications"
@@ -93,6 +103,7 @@ export default function Home({publicationsList, domainsList, talksList, projects
 
 export async function getStaticProps() {
   const domainsList = await client.fetch(`*[_type == "domains"]`);
+  const newsList = await client.fetch(`*[_type == "new"] [0...3]`);
   const publicationsList = await client.fetch(`*[_type == "publication"] [0...3]`);
   const talksList = await client.fetch(`*[_type == "talk"] [0...3]`);
   const projectsList = await client.fetch(`*[_type == "research_project"] [0...3]`);
@@ -101,6 +112,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+      newsList,
       publicationsList,
       domainsList,
       talksList,
