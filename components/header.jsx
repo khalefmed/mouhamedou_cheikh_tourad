@@ -18,11 +18,11 @@ export default function Header(props){
 
     return (
         <div className=" w-full h-24 lg:px-20 md:px-16 xs:px-8 py-5  flex flex-row align-center justify-between">
-            {/* {
+            {
                 props.isIndex ? 
                 <Image
-                 src="/LOGO_CHN.png" 
-                 alt="Logo CHN" 
+                 src="/Tourad_image.jpg" 
+                 alt="Profil" 
                  className="   " 
                  width={60}
                  height={50}
@@ -30,13 +30,13 @@ export default function Header(props){
                 />
                 :
                 <Image
-                 src="/../LOGO_CHN.png" 
-                 alt="Logo CHN" 
+                 src="/../Tourad_image.jpg" 
+                 alt="Profil" 
                  className="   " 
                  width={60}
                  height={50}
                 />
-            } */}
+            }
             <button
                     className="text-primaryWhite hover:text-primaryWhite cursor-pointer text-2xl "
                     onClick={toggleNavBar}
