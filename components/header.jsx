@@ -21,12 +21,13 @@ export default function Header(props){
             {
                 props.isIndex ? 
                 <Image
-                 src="/Tourad_image.jpg" 
-                 alt="Profil" 
-                 className="rounded-image "
+                src="/Tourad_image.jpg" 
+                 alt="Logo CHN" 
+                 className="rounded-full  border-2" 
                  width={50}
                  height={50}
-{/*                  quality={100} */}
+                 quality={100}
+                 
                 />
                 :
                 <Image
