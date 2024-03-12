@@ -23,17 +23,17 @@ export default function Header(props){
                 <Image
                  src="/Tourad_image.jpg" 
                  alt="Profil" 
-                 className="   " 
-                 width={60}
+                 className="rounded-image "
+                 width={50}
                  height={50}
-                 quality={100}
+{/*                  quality={100} */}
                 />
                 :
                 <Image
                  src="/../Tourad_image.jpg" 
                  alt="Profil" 
                  className="   " 
-                 width={60}
+                 width={50}
                  height={50}
                 />
             }
