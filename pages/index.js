@@ -23,6 +23,8 @@ import { is } from '@react-spring/shared'
 import { createClient } from "next-sanity";
 import ResearchProjects from '@/components/research_projects'
 import News from '@/components/news'
+import Experiences from '@/components/experiences'
+import Teaching from '@/components/teaching'
 
 //... 
 
@@ -34,7 +36,7 @@ const client = createClient({
 });
 
 
-export default function Home({publicationsList, domainsList, talksList, projectsList, about, newsList}) {
+export default function Home({publicationsList, domainsList, talksList, projectsList, about, newsList, experiencesList, teachingList}) {
 
 
   return (
@@ -67,6 +69,22 @@ export default function Home({publicationsList, domainsList, talksList, projects
           seeMore="See more"
           isArabic = {false} 
           newsList={newsList}
+          client={client}
+       />
+       < Experiences 
+          talks="Experiences" 
+          allActualites="All experiences" 
+          seeMore="See more"
+          isArabic = {false} 
+          experiencesList={experiencesList}
+          client={client}
+       />
+       < Teaching 
+          talks="Teaching" 
+          allActualites="All " 
+          seeMore="See more"
+          isArabic = {false} 
+          teachingList={teachingList}
           client={client}
        />
       < Actualites 
@@ -106,6 +124,8 @@ export async function getStaticProps() {
   const newsList = await client.fetch(`*[_type == "new"] [0...3]`);
   const publicationsList = await client.fetch(`*[_type == "publication"] [0...3]`);
   const talksList = await client.fetch(`*[_type == "talk"] [0...3]`);
+  const experiencesList = await client.fetch(`*[_type == "experience"] [0...3]`);
+  const teachingList = await client.fetch(`*[_type == "teaching"] [0...3]`);
   const projectsList = await client.fetch(`*[_type == "research_project"] [0...3]`);
   const about = await client.fetch(`*[_type == "about"]{about} [0...1]`);
 
@@ -116,6 +136,8 @@ export async function getStaticProps() {
       publicationsList,
       domainsList,
       talksList,
+      experiencesList,
+      teachingList,
       projectsList,
       about
     }
