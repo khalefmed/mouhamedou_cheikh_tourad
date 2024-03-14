@@ -30,7 +30,7 @@ export default function Experiences (props){
 
 
   return (
-    <section className=' py-12' id='talks'>
+    <section className=' py-12' id='experiences'>
         <motion.h1
         initial = {{
             x : -200,
@@ -70,7 +70,7 @@ export default function Experiences (props){
                         <p className=' text-[grey] text-dm text-start'>{experience.date_debut_experience + " / " +experience.date_fin_experience }</p>
                         <h2 className='text-black font-semibold text-lg  text-start'>{experience.poste}</h2>
                         <h2 className='text-[grey] text-dm text-start'>{experience.etablissement}</h2>
-                        <Link href={`#`} className='text-primaryColor font-semibold text-start w-full-5 my-2 text-lg'>{props.seeMore} </Link>
+                        {/* <Link href={`#`} className='text-primaryColor font-semibold text-start w-full-5 my-2 text-lg'>{props.seeMore} </Link> */}
                     </div>
                 </motion.div>
             })}
@@ -91,7 +91,7 @@ export default function Experiences (props){
         }}
         
          className='w-full lg:px-28 md:px-16 sm:px-2 flex justify-center align-center mt-16'>
-            <Link href='/#talks' className='border border-primaryColor border-1 rounded-full w-fit px-5 py-2 hover:bg-primaryColor hover:text-white transition duration-700 text-primaryColor text-lg'>
+            <Link href='/experiences' className='border border-primaryColor border-1 rounded-full w-fit px-5 py-2 hover:bg-primaryColor hover:text-white transition duration-700 text-primaryColor text-lg'>
                 See all experiences
             </Link>
         </motion.div>

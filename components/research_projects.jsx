@@ -90,7 +90,7 @@ export default function ResearchProjects (props){
         }}
         
          className='w-full lg:px-28 md:px-16 sm:px-2 flex justify-center align-center mt-16'>
-            <Link href='#projects' className='border border-primaryColor border-1 rounded-full w-fit px-5 py-2 hover:bg-primaryColor hover:text-white transition duration-700 text-primaryColor text-lg'>
+            <Link href='/research_projects' className='border border-primaryColor border-1 rounded-full w-fit px-5 py-2 hover:bg-primaryColor hover:text-white transition duration-700 text-primaryColor text-lg'>
                 {props.allActualites}
             </Link>
         </motion.div>

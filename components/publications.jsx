@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { motion, useAnimation } from 'framer-motion';
 import imageUrlBuilder from '@sanity/image-url'
 
-export default function News (props){
+export default function Actualites (props){
 
     
     const builder = imageUrlBuilder(props.client);
@@ -13,16 +13,16 @@ export default function News (props){
     }
     
 
-    // function Substring(texte) {
-    //     if (texte.length <= 80) {
-    //       // Si le texte est plus court ou égal à la longueur maximale, ne rien changer
-    //       return texte;
-    //     } else {
-    //       // Si le texte dépasse la longueur maximale, le réduire et ajouter "..."
-    //       const texteReduit = texte.slice(0, 80) + '...';
-    //       return texteReduit;
-    //     }
-    //   }
+    function Substring(texte) {
+        if (texte.length <= 80) {
+          // Si le texte est plus court ou égal à la longueur maximale, ne rien changer
+          return texte;
+        } else {
+          // Si le texte dépasse la longueur maximale, le réduire et ajouter "..."
+          const texteReduit = texte.slice(0, 80) + '...';
+          return texteReduit;
+        }
+      }
 
 
 
@@ -30,7 +30,7 @@ export default function News (props){
 
 
   return (
-    <section className=' py-12' id='news'>
+    <section className=' py-12' id="publications">
         <motion.h1
         initial = {{
             x : -200,
@@ -45,13 +45,13 @@ export default function News (props){
         }}
         
         
-        className={`section-title text-center lg:text-4xl md:text-3xl xs:text-2xl text-primaryColor font-bold mt-12 md:mb-20 xs:mb-10 uppercase ${props.isArabic ? '' : 'tracking-[1rem] xs:tracking-[0.5rem]'} ` }>News</motion.h1>
+        className={`section-title text-center lg:text-4xl md:text-3xl xs:text-2xl text-primaryColor font-bold mt-12 md:mb-20 xs:mb-10 uppercase ${props.isArabic ? '' : 'tracking-[1rem] xs:tracking-[0.5rem]'} ` }>Publications</motion.h1>
             
-        <div key={5487} className=' flex flex-row flex-wrap justify-center align-center gap-8 lg:px-20 md:px-16 sm:px-2'>
+        <div key={1} className=' flex flex-row flex-wrap justify-center align-center gap-8 lg:px-20 md:px-16 sm:px-2'>
             
-            {props.newsList && props.newsList.map((news) => {
+            {props.publicationsList && props.publicationsList.map((publication) => {
                 return <motion.div
-                key={news._id}
+                key={publication._id}
                 initial = {{
                     x : 200,
                     y : 0,
@@ -66,9 +66,9 @@ export default function News (props){
                  className=' actualite shadow-2xl flex flex-col justiyf-center align-center gap-2 py-2 px-2 rounded-lg w-[21rem] '>
                     {/* <img src={urlFor(publication.image_actualite.asset._ref).url()} alt="" className=' rounded-lg w-full max-h-[12rem] box-content' /> */}
                     <div className='px-3 py-3 flex flex-col gap-2'>
-                        <p className=' text-[grey] text-dm text-start'>{news.date_new}</p>
-                        <h2 className='text-black font-semibold text-lg  text-start'>{news.new_title}</h2>
-                        <Link href={`${news.link}`} target='_blank' className='text-primaryColor font-semibold text-start w-full-5 my-2 text-lg'>{props.seeMore} </Link>
+                        <p className=' text-[grey] text-dm text-start'>{publication.date_publication}</p>
+                        <h2 className='text-black font-semibold text-lg  text-start'>{Substring(publication[`titre_publication`])}</h2>
+                        <Link href={`/publications/${publication._id}`} className='text-primaryColor font-semibold text-start w-full-5 my-2 text-lg'>{props.seeMore} </Link>
                     </div>
                 </motion.div>
             })}
@@ -89,8 +89,8 @@ export default function News (props){
         }}
         
          className='w-full lg:px-28 md:px-16 sm:px-2 flex justify-center align-center mt-16'>
-            <Link href='/news' className='border border-primaryColor border-1 rounded-full w-fit px-5 py-2 hover:bg-primaryColor hover:text-white transition duration-700 text-primaryColor text-lg'>
-                See all news
+            <Link href='/publications' className='border border-primaryColor border-1 rounded-full w-fit px-5 py-2 hover:bg-primaryColor hover:text-white transition duration-700 text-primaryColor text-lg'>
+                See all publications
             </Link>
         </motion.div>
     </section>

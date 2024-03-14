@@ -49,7 +49,7 @@ export default function Talks (props){
             
         <div key={5487} className=' flex flex-row flex-wrap justify-center align-center gap-8 lg:px-20 md:px-16 sm:px-2'>
             
-            {props.talksList && props.talksList.map((talk) => {
+        {props.talksList && props.talksList.map((talk) => {
                 return <motion.div
                 key={talk._id}
                 initial = {{
@@ -90,7 +90,7 @@ export default function Talks (props){
         }}
         
          className='w-full lg:px-28 md:px-16 sm:px-2 flex justify-center align-center mt-16'>
-            <Link href='/#talks' className='border border-primaryColor border-1 rounded-full w-fit px-5 py-2 hover:bg-primaryColor hover:text-white transition duration-700 text-primaryColor text-lg'>
+            <Link href='/talks' className='border border-primaryColor border-1 rounded-full w-fit px-5 py-2 hover:bg-primaryColor hover:text-white transition duration-700 text-primaryColor text-lg'>
                 See all talks
             </Link>
         </motion.div>
