@@ -30,7 +30,7 @@ export default function News (props){
 
 
   return (
-    <section className=' py-12' id='news'>
+    <section className=' py-12 bg-red-800' id='news'>
         <motion.h1
         initial = {{
             x : -200,
@@ -45,11 +45,13 @@ export default function News (props){
         }}
         
         
-        className={`section-title text-center lg:text-4xl md:text-3xl xs:text-2xl text-primaryColor font-bold mt-12 md:mb-20 xs:mb-10 uppercase ${props.isArabic ? '' : 'tracking-[1rem] xs:tracking-[0.5rem]'} ` }>News</motion.h1>
+        className={`section-title text-center lg:text-4xl md:text-3xl xs:text-2xl text-white font-bold mt-12 md:mb-20 xs:mb-10 uppercase ${props.isArabic ? '' : 'tracking-[1rem] xs:tracking-[0.5rem]'} ` }>News</motion.h1>
             
         <div key={5487} className=' flex flex-row flex-wrap justify-center align-center gap-8 lg:px-20 md:px-16 sm:px-2'>
             
             {props.newsList && props.newsList.map((news) => {
+                console.log(news.new_title)
+                console.log(news._id);
                 return <motion.div
                 key={news._id}
                 initial = {{
@@ -63,7 +65,7 @@ export default function News (props){
                     opacity : 1,
                     transition : {duration : 1}
                 }}
-                 className=' actualite shadow-2xl flex flex-col justiyf-center align-center gap-2 py-2 px-2 rounded-lg w-[21rem] '>
+                 className=' bg-white actualite shadow-2xl flex flex-col justiyf-center align-center gap-2 py-2 px-2 rounded-lg w-[21rem] '>
                     {/* <img src={urlFor(publication.image_actualite.asset._ref).url()} alt="" className=' rounded-lg w-full max-h-[12rem] box-content' /> */}
                     <div className='px-3 py-3 flex flex-col gap-2'>
                         <p className=' text-[grey] text-dm text-start'>{news.date_new}</p>
@@ -89,7 +91,7 @@ export default function News (props){
         }}
         
          className='w-full lg:px-28 md:px-16 sm:px-2 flex justify-center align-center mt-16'>
-            <Link href='/news' className='border border-primaryColor border-1 rounded-full w-fit px-5 py-2 hover:bg-primaryColor hover:text-white transition duration-700 text-primaryColor text-lg'>
+            <Link href='/news' className='border border-white border-1 rounded-full w-fit px-5 py-2 hover:bg-white hover:text-primaryColor transition duration-700 text-white text-lg'>
                 See all news
             </Link>
         </motion.div>
