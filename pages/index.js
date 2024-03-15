@@ -126,7 +126,7 @@ export default function Home({publicationsList, domainsList, talksList, projects
 
 export async function getStaticProps() {
   const domainsList = await client.fetch(`*[_type == "domains"]`);
-  const newsList = await client.fetch(`*[_type == "new"] | order(date desc) [0...3]`);
+  const newsList = await client.fetch(`*[_type == "new"] | order(date_new desc) [0...3]`);
   const publicationsList = await client.fetch(`*[_type == "publication"] [0...3]`);
   const talksList = await client.fetch(`*[_type == "talk"] [0...3]`);
   const experiencesList = await client.fetch(`*[_type == "experience"] [0...3]`);
