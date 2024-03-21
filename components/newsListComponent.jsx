@@ -41,7 +41,7 @@ export default function NewsListComponent(props){
                     {/* <img src={urlFor(publication.image_actualite.asset._ref).url()} alt="" className=' rounded-lg w-full max-h-[12rem] box-content' /> */}
                     <div className='px-3 py-3 flex flex-col gap-2'>
                         <p className=' text-[grey] text-dm text-start'>{news.date_new}</p>
-                        <h2 className='text-black font-semibold text-lg  text-start'>{news.new_title}</h2>
+                        <h2 className='text-red-800 font-semibold text-lg  text-start'>{news.new_title}</h2>
                         <Link href={`${news.link}`} target='_blank' className='text-primaryColor font-semibold text-start w-full-5 my-2 text-lg'>{props.seeMore} </Link>
                     </div>
                 </motion.div>
