@@ -53,7 +53,7 @@ export default function Home({publicationsList, domainsList, talksList, projects
         contacts="Projects"
         annonces="Domains"
         news="News"
-        coaching="Coaching"
+        coaching="Courses"
         experiences="Professional Experience"
       />
       < HomeMainSection
