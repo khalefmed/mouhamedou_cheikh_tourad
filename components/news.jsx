@@ -30,7 +30,7 @@ export default function News (props){
 
 
   return (
-    <section className=' py-12 bg-red-800' id='news'>
+    <section className=' py-12' id='news'>
         <motion.h1
         initial = {{
             x : -200,
@@ -45,7 +45,7 @@ export default function News (props){
         }}
         
         
-        className={`section-title text-center lg:text-4xl md:text-3xl xs:text-2xl text-white font-bold mt-12 md:mb-20 xs:mb-10 uppercase ${props.isArabic ? '' : 'tracking-[1rem] xs:tracking-[0.5rem]'} ` }>News</motion.h1>
+        className={`section-title text-center lg:text-4xl md:text-3xl xs:text-2xl text-primaryColor font-bold mt-12 md:mb-20 xs:mb-10 uppercase ${props.isArabic ? '' : 'tracking-[1rem] xs:tracking-[0.5rem]'} ` }>News</motion.h1>
             
         <div key={5487} className=' flex flex-row flex-wrap justify-center align-center gap-8 lg:px-20 md:px-16 sm:px-2'>
             
