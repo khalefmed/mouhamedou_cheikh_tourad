@@ -131,7 +131,7 @@ export async function getStaticProps() {
   const talksList = await client.fetch(`*[_type == "talk"] [0...3]`);
   const experiencesList = await client.fetch(`*[_type == "experience"] [0...3]`);
   const coachingList = await client.fetch(`*[_type == "coaching"] [0...3]`);
-  const projectsList = await client.fetch(`*[_type == "research_project"] [0...3]`);
+  const projectsList = await client.fetch(`*[_type == "research_project"]| order(date_project desc) [0...3]`);
   const about = await client.fetch(`*[_type == "about"]{about} [0...1]`);
 
 
