@@ -41,7 +41,7 @@ export default function ProjectsListComponent(props){
                  className=' actualite shadow-2xl flex flex-col justiyf-center align-center gap-2 py-2 px-2 rounded-lg w-[21rem] '>
                     {/* <img src={urlFor(publication.image_actualite.asset._ref).url()} alt="" className=' rounded-lg w-full max-h-[12rem] box-content' /> */}
                     <div className='px-3 py-3 flex flex-col gap-2'>
-                        <p className=' text-[grey] text-dm text-start'>{project.date_project}</p>
+{/*                         <p className=' text-[grey] text-dm text-start'>{project.date_project}</p> */}
                         <h2 className='text-black font-semibold text-lg  text-start'>{project.project_title}</h2>
                         <Link href={`#`} className='text-primaryColor font-semibold text-start w-full-5 my-2 text-lg'>{props.seeMore} </Link>
                     </div>
