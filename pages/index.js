@@ -117,7 +117,7 @@ export default function Home({publicationsList, domainsList, talksList, projects
           client={client}
        />
       < Services services="Domains" isArabic={false} domainsList={domainsList} />
-      < Footer footer="Copyright 2024" />
+      < Footer footer=" Copyright - 2024 " />
     </div>
   )
 }
