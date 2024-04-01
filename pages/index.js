@@ -84,7 +84,8 @@ export default function Home({publicationsList, domainsList, talksList, projects
           experiencesList={experiencesList}
           client={client}
        />
-       < CoachingC 
+      // To be modified :
+       < CoachingC
           talks="Coaching" 
           allActualites="All " 
           seeMore="See more"
