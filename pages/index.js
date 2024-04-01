@@ -24,8 +24,6 @@ import { createClient } from "next-sanity";
 import ResearchProjects from '@/components/research_projects'
 import News from '@/components/news'
 import Experiences from '@/components/experiences'
-import Teaching from '@/components/coaching'
-import Coaching from './courses'
 import CoachingC from '@/components/coaching'
 
 //... 
