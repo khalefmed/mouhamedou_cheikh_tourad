@@ -80,7 +80,8 @@ export async function getStaticProps() {
     return {
       props: {
         talksList
-      }
+      },
+        revalidate: 60,
     };
   }
 
