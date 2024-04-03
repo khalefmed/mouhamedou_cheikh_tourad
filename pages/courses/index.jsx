@@ -79,7 +79,8 @@ export async function getStaticProps() {
     return {
       props: {
         coachingList
-      }
+      },
+        revalidate: 60,
     };
   }
 
