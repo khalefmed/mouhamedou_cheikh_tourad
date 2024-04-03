@@ -77,7 +77,8 @@ export async function getStaticProps() {
     return {
       props: {
         experiencesList
-      }
+      },
+        revalidate: 60,
     };
   }
 
