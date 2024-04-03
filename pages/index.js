@@ -143,6 +143,7 @@ export async function getStaticProps() {
       coachingList,
       projectsList,
       about
-    }
+    },
+    revalidate: 60,
   };
 }
