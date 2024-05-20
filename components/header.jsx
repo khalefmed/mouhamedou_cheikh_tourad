@@ -51,13 +51,13 @@ export default function Header(props){
             <ul className={` lg:flex lg:flex-row justify-center align-center lg:gap-10 md:gap-10 xs:gap-8 my-auto text-white lg:static xs:absolute lg:w-fit lg:h-full xs:w-[100vw] xs:h-[88vh] lg:top-0 xs:top-24  xs:left-0 lg:bg-transparent xs:bg-headerColor xs:flex-col  xs:items-center lg:text-lg md:text-2xl xs:text-2xl ${ showNav ? 'flex':'cached'} transform xs:animate-navBarAnimation` }>
                 <li><Link href="/" className=' hover:text-secondaryWhite cursor-pointer font-medium'>{props.accueil}</Link></li>
                 <li><Link href="/#about" className=' hover:text-secondaryWhite font-medium'>{props.aboutUs}</Link></li>
-                <li><Link href="/news" className=' hover:text-secondaryWhite font-medium'>{props.news}</Link></li>
+{/*                 <li><Link href="/news" className=' hover:text-secondaryWhite font-medium'>{props.news}</Link></li> */}
                 <li><Link href="/experiences" className=' hover:text-secondaryWhite font-medium'>{props.experiences}</Link></li>
-                <li><Link href="/courses" className=' hover:text-secondaryWhite font-medium'>{props.coaching}</Link></li>
+{/*                 <li><Link href="/courses" className=' hover:text-secondaryWhite font-medium'>{props.coaching}</Link></li>
                 <li><Link href="/publications" className=' hover:text-secondaryWhite font-medium'>{props.services}</Link></li>
                 <li><Link href="/talks" className=' hover:text-secondaryWhite font-medium'>{props.actualites}</Link></li>
                 <li><Link href="/research_projects" className=' hover:text-secondaryWhite font-medium'>{props.contacts}</Link></li>
-                <li><Link href="/#domains" className=' hover:text-secondaryWhite font-medium'>{props.annonces}</Link></li>
+                <li><Link href="/#domains" className=' hover:text-secondaryWhite font-medium'>{props.annonces}</Link></li> */}
                 {/* <li className='flex lg:flex-row xs:flex-col gap-3 lg:ml-3'>
                     { i18n.language == "ar" ? 
                     <button onClick={() => changeLanguage('fr')}>Français</button> : 
